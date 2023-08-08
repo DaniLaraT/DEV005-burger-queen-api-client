@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import Logo from '../../components/logo/logo';
+import AuthPost from '../../api_function/apiMock';
 import FormLogin from '../../components/login/formLogin';
+import Logo from '../../components/logo/logo';
 import './login.css'
-import AuthPost from '../api_function/apiMock';
 
 const Login = () => {
   const handleFormSubmit = async (values) => {
