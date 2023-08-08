@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import './formLogin.css'
 
-const FormLogin = () => {
+const FormLogin = ({onFormSubmit}) => {
   const [values, setValues] = React.useState({
     email: '',
     password: '',
@@ -68,10 +68,10 @@ const FormLogin = () => {
     const isValid = validateAll()
     
     if (!isValid) {
-      return false
+      return;
     }
-    console.log(JSON.stringify(values))
-    return JSON.stringify(values);
+    onFormSubmit(values);
+    console.log(onFormSubmit);
    
   }
   
