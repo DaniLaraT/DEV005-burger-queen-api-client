@@ -1,7 +1,7 @@
 const Kitchen = () => (
     <>
-      <h1>Página no encontrada</h1>
-      <span>La página solicitada, no existe</span>
+      <h1>PAGINA DE CHEFF</h1>
+      <span>Aqui van las ordenes pendientes</span>
     </>
   )
   
