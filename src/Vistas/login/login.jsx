@@ -9,25 +9,24 @@ import { useNavigate } from 'react-router';
 const Login = () => {
   const navigate = useNavigate();
 
-  const handleFormSubmit = async (values) => {
-    try {
-      const response = await AuthPost(values.email, values.password);
-      // Aquí puedes hacer algo con la respuesta, por ejemplo, redirigir al usuario o mostrar un mensaje de éxito.
-      const userRole = response.user.role;
-
-      console.log(response);
-
-      // Verificar el rol y redirigir en consecuencia.
-      if (userRole === 'admin') {
-        navigate('/AdminProducts');
-      } else if (userRole === 'waiter') {
-          navigate('/MenuBreakfast');
-      } else if (userRole === 'cheff') {
-        navigate('/Kitchen');}
-    } catch (error) {
-      // Manejo de errores
-      console.error(error.message);
-    }
+  const handleFormSubmit = (values) => {
+    AuthPost(values.email, values.password)
+      .then((response) => {
+        const userRole = response.user.role;
+  
+        console.log(response);
+  
+        // Verificar el rol y redirigir en consecuencia.
+        const isAdmin = userRole === 'admin';
+        const isWaiter = userRole === 'waiter';
+        let route = '/Kitchen';
+        if (isAdmin) {
+          route ='/AdminProducts';
+        } else if (isWaiter) {
+          route ='/MenuBreakfast';
+        }
+        navigate(route);
+      })
   };
 
 

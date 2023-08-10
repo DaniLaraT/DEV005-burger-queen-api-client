@@ -8,54 +8,6 @@ const FormLogin = ({onFormSubmit}) => {
     email: '',
     password: '',
   })
- 
-  const [validations, setValidations] = React.useState({
-    email: '',
-    password: '',
-  })
-  
-   const validateAll = () => {
-    const { email, password } = values
-    const validations = { email: '', password: '' }
-    let isValid = true
-    
-    if (!email) {
-      validations.email = 'Email is required'
-      isValid = false
-    }
-    
-    if (email && !/\S+@\S+\.\S+/.test(email)) {
-      validations.email = 'Email format must be as example@mail.com'
-      isValid = false
-    }
-    
-    if (!password) {
-      validations.password = 'Password is required'
-      isValid = false
-    }
-    
-    if (!isValid) {
-      setValidations(validations)
-    }
-    
-    return isValid
-  } 
-
-   const validateOne = (e) => {
-    const { name } = e.target
-    const value = values[name]
-    let message = ''
-    
-    if (!value) {
-      message = `${name} is required`
-    }
-
-    if (value && name === 'email' && !/\S+@\S+\.\S+/.test(value)) {
-      message = 'Email format must be as example@mail.com'
-    }
-    
-    setValidations({...validations, [name]: message })
-  } 
   
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -63,24 +15,12 @@ const FormLogin = ({onFormSubmit}) => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-
-    const isValid = validateAll()
-    
-    if (!isValid) {
-      return;
-    }
+    e.preventDefault();
     onFormSubmit(values);
     console.log(onFormSubmit);
-   
   }
   
-  const { email, password } = values
-
-  const { 
-    email: emailVal, 
-    password: passwordVal, 
-  } = validations
+  const { email, password } = values;
   
     return (
     <section className='sectionLogin'>
@@ -93,15 +33,14 @@ const FormLogin = ({onFormSubmit}) => {
          <form onSubmit={handleSubmit} className='formLogin' >
           <div>
               <input 
-               type='text' 
+               type='email' 
                 name='email'
                 className='email' 
                 placeholder='Email'
                 value={email} 
                 onChange={handleChange}
-                onBlur={validateOne}
+                required
               />
-            <div>{emailVal}</div>
           </div>
           
           <div>
@@ -112,9 +51,8 @@ const FormLogin = ({onFormSubmit}) => {
                 placeholder='Contraseña'
                 value={password} 
                 onChange={handleChange}
-                onBlur={validateOne}
+                required
               />
-            <div>{passwordVal}</div>
           </div>
           
           <button type="submit" className='buttonLogin'>Iniciar sesion</button>
