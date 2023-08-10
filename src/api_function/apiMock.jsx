@@ -12,11 +12,10 @@
         });
 
         if (response.ok) {
-            alert('funciono')
             return await response.json();
         } else {
             //error de codigo solicitud
-            alert('error')
+            alert('Los datos ingresados son incorrectos')
             throw new Error('Error en la solicitud: ' + response.status);
         }
         //error de coneccion

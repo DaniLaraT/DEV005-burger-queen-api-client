@@ -4,18 +4,34 @@ import AuthPost from '../../api_function/apiMock';
 import FormLogin from '../../components/login/formLogin';
 import Logo from '../../components/logo/logo';
 import './login.css'
+import { useNavigate } from 'react-router';
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const handleFormSubmit = async (values) => {
     try {
       const response = await AuthPost(values.email, values.password);
       // Aquí puedes hacer algo con la respuesta, por ejemplo, redirigir al usuario o mostrar un mensaje de éxito.
+      const userRole = response.user.role;
+
       console.log(response);
+
+      // Verificar el rol y redirigir en consecuencia.
+      if (userRole === 'admin') {
+        navigate('/AdminProducts');
+      } else if (userRole === 'waiter') {
+          navigate('/MenuBreakfast');
+      } else if (userRole === 'cheff') {
+        navigate('/Kitchen');}
     } catch (error) {
-      // Aquí puedes manejar el error, como mostrar un mensaje de error al usuario.
+      // Manejo de errores
       console.error(error.message);
     }
   };
+
+
+
 
   return (
     <>
