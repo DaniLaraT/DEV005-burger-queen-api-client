@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 /*import React from 'react'
-import Login from './Vistas/login';
+import Login from './views/login';
 
 function App() {
   return (
@@ -11,17 +11,18 @@ function App() {
 export default App;*/
 
 import { Routes, Route } from "react-router-dom";
-import Login from "./Vistas/login/login";
-import MenuBreakfast from "./Vistas/waiter/menuBreakfast";
-import MenuLunch from "./Vistas/waiter/menuLunch";
-import OrderReady from "./Vistas/waiter/orderReady";
-import OrderPending from "./Vistas/waiter/orderPending";
-import Kitchen from "./Vistas/chef/kitchen";
-import AdminProducts from "./Vistas/administrator/adminProducts";
-import AdminUsers from "./Vistas/administrator/adminUsers";
-import Page404 from "./Vistas/page404/page404";
+import Login from "./views/login/login";
+import MenuBreakfast from "./views/waiter/menuBreakfast";
+import MenuLunch from "./views/waiter/menuLunch";
+import OrderReady from "./views/waiter/orderReady";
+import OrderPending from "./views/waiter/orderPending";
+import Kitchen from "./views/chef/kitchen";
+import AdminProducts from "./views/administrator/adminProducts";
+import AdminUsers from "./views/administrator/adminUsers";
+import Page404 from "./views/page404/page404";
 
 import "./App.css";
+
 
 function App() {
   return (
