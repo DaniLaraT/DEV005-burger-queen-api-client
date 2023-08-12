@@ -1,0 +1,111 @@
+h1 {
+    font-size: larger;
+    color:rgba(7, 20, 59, 1) ;
+  }
+  
+ 
+  
+  .waiter-nav {
+    margin: 0 auto;
+    width: 99vw;
+    height: 10%;
+    /* background-color: rgba(234, 106, 18, 0.7) ; */
+    border-radius: 20px 20px 0 0;
+    margin-top: 1%;
+  }
+  
+  
+  .logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: solid 2.5px rgba(234, 106, 18, 1) ;
+  }
+  
+  .waiterIcon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 20px 0px;
+  }
+  
+  .orderLogo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+  
+  .container-order-logo {
+    font-size: 15px;
+    width: 83px;
+    height: 83px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    color: white;
+    background-color: rgba(234, 106, 18, 1) ;
+  }
+  
+  .title {
+    margin: 35px 225px;
+  }
+  
+  .title-view {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px 10px;
+  }
+  
+  .BQLogo {
+    width: 100px;
+    height: 100px;
+  }
+ 
+  .container-input-btn {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+    /* margin-left: 5%; */
+  }
+  
+  .input-name {
+    height: 35px;
+    margin: 10px;
+    color: rgba(7, 20, 59, 1);
+  }
+  
+  .btn-order {
+    /* background-color: rgba(234, 106, 18, 1);
+    font-size: 20px;
+    color: white;
+    border: 1px solid rgba(234, 106, 18, 1); */
+    background-color: white;
+    font-size: 20px;
+    color: rgba(234, 106, 18, 1);
+    border: 1px solid rgba(234, 106, 18, 1);
+  }
+  
+  .btn-cook {
+    background-color: rgba(234, 106, 18, 1);
+    color: white;
+    border: 1px solid rgba(234, 106, 18, 1);
+  }
+  
+  /* .btn-add:active {
+    background-color: #ef7035;
+    color: rgb(227, 206, 193);
+  } */
+  
+  
+  .container-btn-menu {
+    padding-top: 1%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1%;
+  }
+  
+  
