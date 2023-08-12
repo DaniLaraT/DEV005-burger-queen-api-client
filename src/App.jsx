@@ -1,15 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-/*import React from 'react'
-import Login from './views/login';
-
-function App() {
-  return (
-    <Login/>
-  );
-}
-
-export default App;*/
-
 import { Routes, Route } from "react-router-dom";
 import Login from "./views/login/login";
 import MenuBreakfast from "./views/waiter/menuBreakfast";
