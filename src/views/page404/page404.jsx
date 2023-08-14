@@ -1,13 +1,15 @@
-/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import './Page404.css';
-import background from '/img/background.png';
+import './page404.css';
+import Logo from '../../components/logo/logo';
 
 const Page404 = () => (
-  <div className="page-content">
+  <div className="container">
     <h1 className="h1">Oops, ¡Esta página no existe!</h1>
-    <img src={background} alt="Burger Error" className="burger-image" />
-    <p className="error-message">Parece que has llegado a un territorio desconocido. La hamburguesa se comió esta página.</p>
+    <div className='Logo404'>
+      <Logo />
+    </div>
+    <p className="error-message">Parece que has llegado a un territorio desconocido. El dinosaurio se comió esta página.</p>
     <a href="/" className="back-link">Volver al inicio</a>
   </div>
 );

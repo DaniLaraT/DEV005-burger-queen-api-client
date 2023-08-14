@@ -4,48 +4,23 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+    background-color: #ffff;
     display: flex;
+    width: 1024px;
+    height: 768px;
+    background-image: url("img/.logo2.png");
+  }
+  
+  /* Contenedor central */
+  .container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
   }
-  
-  /* Contenedor principal */
-  .background-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  /* Contenedor del fondo */
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Imagen  */
-  .burger-image {
-    width: 200px;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Contenedor del contenido */
-  .page-content {
-    text-align: center;
-  }
-  
+
+
   /* Título */
   .h1 {
     font-size: 32px;
@@ -57,6 +32,7 @@ body {
   .error-message {
     font-size: 18px;
     color: #666;
+    text-align: center;
     margin-bottom: 20px;
   }
   
