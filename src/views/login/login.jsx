@@ -19,7 +19,7 @@ const Login = () => {
         // Verificar el rol y redirigir en consecuencia.
         const isAdmin = userRole === 'admin';
         const isWaiter = userRole === 'waiter';
-        const isChef = userRole === 'cheff'
+        const isChef = userRole === 'chef'
         let route = '/Kitchen';
         if (isAdmin) {
           route ='/AdminProducts';
