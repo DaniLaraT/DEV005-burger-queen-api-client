@@ -1,0 +1,12 @@
+.body{
+  
+    width: 1024px;
+    height: 768px;
+    background: #CF463F;
+    background-image: url("img/imgfondo.png");
+    /*background-image: url("images/fondo.png");*/
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: -70%;
+}
