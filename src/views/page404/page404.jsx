@@ -1,8 +1,17 @@
-const Page404 = () => (
-  <>
-    <h1>Página no encontrada</h1>
-    <span>La página solicitada, no existe</span>
-  </>
-)
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import './page404.css';
+import Logo from '../../components/logo/logo';
 
-export default Page404
+const Page404 = () => (
+  <div className="container">
+    <h1 className="h1">Oops, ¡Esta página no existe!</h1>
+    <div className='Logo404'>
+      <Logo />
+    </div>
+    <p className="error-message">Parece que has llegado a un territorio desconocido. Alguien se comió esta página.</p>
+    <a href="/" className="back-link">Volver al inicio</a>
+  </div>
+);
+
+export default Page404;
