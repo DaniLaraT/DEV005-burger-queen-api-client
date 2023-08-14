@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom'; // Importa NavLink
 import './NavBar.css';
 
 const NavBar = () => {
@@ -24,8 +25,9 @@ const NavBar = () => {
         {isDropdownOpen && (
           <div className="dropdown-menu">
             <ul>
-              <li>Cerrar Sesión</li>
-              <li>Órdenes</li>
+              {/* Utiliza NavLink para crear enlaces de navegación */}
+              <li><NavLink to="/cerrar-sesion">Cerrar Sesión</NavLink></li>
+              <li><NavLink to="/ordenes">Órdenes</NavLink></li>
             </ul>
           </div>
         )}
@@ -35,3 +37,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
