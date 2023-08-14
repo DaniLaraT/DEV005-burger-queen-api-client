@@ -9,7 +9,7 @@ const Page404 = () => (
     <div className='Logo404'>
       <Logo />
     </div>
-    <p className="error-message">Parece que has llegado a un territorio desconocido. El dinosaurio se comió esta página.</p>
+    <p className="error-message">Parece que has llegado a un territorio desconocido. Alguien se comió esta página.</p>
     <a href="/" className="back-link">Volver al inicio</a>
   </div>
 );
