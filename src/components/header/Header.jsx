@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
+import './header.css';
 import NavBar from './NavBar';
 import Logo from './Logo'; 
 import Title from './Title'; 
