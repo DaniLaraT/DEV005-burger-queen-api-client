@@ -10,3 +10,20 @@
     background-position: left;
     background-position-x: -70%;
 }
+
+.container1 {
+    width: 1024px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+}
+.extra1{
+    background-color: aqua;
+
+}
+.Extra{
+    background-color: red;
+}

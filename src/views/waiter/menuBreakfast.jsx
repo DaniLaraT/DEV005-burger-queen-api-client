@@ -1,14 +1,31 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
-import './menuBreakfast.css'
+import React, { useState } from 'react';
+import './menuBreakfast.css';
+import OptionsProductsMenu from '../../components/optionProductsMenu/OptionProductsMenu';
+import ProductsOrder from '../../components/productsOrder/ProductsOrder';
+import Header from '../../components/header/Header';
 
-const MenuBreakfast = () => (
-    <>
-      <div className='body'>
-      <h1>PAGINA DE DESAYUNO</h1>
+const MenuBreakfast = () => {
+  const [order, setOrder] = useState([]);
+
+  const handleAddToOrder = (product) => {
+    setOrder(prevOrder => [...prevOrder, product]);
+  };
+
+  return (
+    <div className='body'>
+      <Header/>
       <span>aqui podras hacer la orden de desayuno</span>
+      <div className='container1'>
+        <div className='extra1'>
+          <OptionsProductsMenu onAddToOrder={handleAddToOrder} />
+        </div>
       </div>
-    </>
-  )
-  
-  export default MenuBreakfast
+      <div className='order'>
+        <h1>HOLAAAAAA</h1>
+        <ProductsOrder order={order} />
+      </div>
+    </div>
+  );
+};
+
+export default MenuBreakfast;

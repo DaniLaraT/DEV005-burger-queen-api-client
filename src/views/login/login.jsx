@@ -15,6 +15,10 @@ const Login = () => {
         const userRole = response.user.role;
   
         console.log(response);
+        const accessToken = response.accessToken; // Obtén el token de la respuesta
+      
+      // Guarda el token en localStorage
+      localStorage.setItem('accessToken', accessToken);
   
         // Verificar el rol y redirigir en consecuencia.
         const isAdmin = userRole === 'admin';

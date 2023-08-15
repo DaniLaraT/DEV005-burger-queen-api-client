@@ -2,16 +2,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './header.css';
-import NavBar from './NavBar';
-import Logo from './Logo'; 
-import Title from './Title'; 
+import NavBar from '../NavBar/NavBar';
+import Title from '../Title/Title';
 
-function Header({ title }) {
+function Header() {
   return (
     <header className="header">
       <NavBar />
-      <Logo /> 
-      <Title title={title} />
+      <div className='title-header'>
+      <Title title={'ASDFHGDJHKJLDSF'} />
+      </div>
     </header>
   );
 }
