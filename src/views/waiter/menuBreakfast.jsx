@@ -3,6 +3,7 @@ import './menuBreakfast.css';
 import OptionsProductsMenu from '../../components/optionProductsMenu/OptionProductsMenu';
 import ProductsOrder from '../../components/productsOrder/ProductsOrder';
 import Header from '../../components/header/Header';
+import Button from '../../components/Button/ButtonView/ButtonView';
 
 const MenuBreakfast = () => {
   const [order, setOrder] = useState([]);
@@ -14,15 +15,14 @@ const MenuBreakfast = () => {
   return (
     <div className='body'>
       <Header/>
-      <span>aqui podras hacer la orden de desayuno</span>
+      <h5>Aqui van nuestros bottones</h5>
       <div className='container1'>
         <div className='extra1'>
           <OptionsProductsMenu onAddToOrder={handleAddToOrder} />
         </div>
-      </div>
       <div className='order'>
-        <h1>HOLAAAAAA</h1>
         <ProductsOrder order={order} />
+      </div>
       </div>
     </div>
   );

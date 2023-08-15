@@ -1,4 +1,5 @@
 import React from 'react';
+import "./ProductsOrder.css"; 
 
 const ProductsOrder = ({ order }) => {
   // Función para agrupar los productos por id y contar la cantidad
@@ -17,12 +18,17 @@ const ProductsOrder = ({ order }) => {
   const groupedOrder = Object.values(groupedProducts);
 
   return (
-    <div>
-      <h2>Lista de Pedidos</h2>
-      <ul>
+    <div className='Container-Order'>
+      <div> aqui tiene que ir  input para nombre</div>
+      <div className='information'>
+      <h4>Cantidad</h4>
+      <h4>Descripción</h4>
+      <h4>Total</h4>
+      </div>
+      <ul className='Products-OrderCss'>
         {groupedOrder.map((product, index) => (
-          <li key={index}>
-           Cantidad: {product.quantity} - {product.name}  - Total: ${product.price * product.quantity}
+          <li key={index} className='product-Order'>
+           <h5>{product.quantity} </h5> <h5> {product.name} </h5>  <h5>${product.price * product.quantity}</h5>
           </li>
         ))}
       </ul>

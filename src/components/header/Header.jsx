@@ -10,7 +10,7 @@ function Header() {
     <header className="header">
       <NavBar />
       <div className='title-header'>
-      <Title title={'ASDFHGDJHKJLDSF'} />
+      <Title title={'MENU'} />
       </div>
     </header>
   );

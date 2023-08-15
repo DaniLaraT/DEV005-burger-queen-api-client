@@ -1,8 +1,8 @@
 .content-logo {
-    width: 50%;
+    width: 100%;
     height: auto;
 }
 
-img.logoImg {
-    width: 900%;
+.content-logo img {
+    width: 60%;
 }

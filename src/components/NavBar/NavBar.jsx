@@ -10,11 +10,6 @@ const NavLinks = () => (
   </div>
 );
 
-const NavHeader = () => (
-  <div className="header-title">
-  </div>
-);
-
 const NavBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -24,13 +19,16 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
+      <div className='nav'>
       <div className="user-navBar">
         <img src="/img/usuario.png" alt="Logo" className="user-nav" />
       </div>
-      <NavHeader />
       <button onClick={toggleDropdown} className="dropdown-button">
       </button>
+      </div>
+      <div className='navDesplegable'>
       {isDropdownOpen && <NavLinks />}
+      </div>
     </nav>
   );
 };
