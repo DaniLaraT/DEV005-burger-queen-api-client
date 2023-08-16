@@ -1,53 +1,29 @@
-/* eslint-disable no-unused-vars */
-import React, { useState } from "react";
-import PropTypes from "prop-types"; // Importa la biblioteca prop-types
-import "./ButtonView.css";
+import React, { useState } from 'react';
+import './ButtonView.css';
 
-function Button({ id, type, text, onClick }) {
-  const [currentText, setCurrentText] = useState(text);
+function ButtonViews({ Text1, Text2 }) {
+  const [clickedButton, setClickedButton] = useState(1);
 
-  const handleClick = () => {
-    setCurrentText("Button clicked!");
+  const handleButtonClick = (buttonNumber) => {
+    setClickedButton(buttonNumber);
   };
 
   return (
-    <>
-<section>
-        <button type="button" className={`bnBreakfast ${isBreakfast ? "selecBtn" : "unSelectBtn"}`} onClick={handleBreakfastButtonClick}>Desayunos</button>
-        <button type="button" className={`btnDinner ${isDinner ? "selecBtn" : "unSelectBtn"}`} onClick={handleDinnerButtonClick}>Almuerzo/Cena</button>
-      </section>
-    </>
-  );
-}
-
-// Define las expectativas de las propiedades (props validation)
-Button.propTypes = {
-  id: PropTypes.string, // Espera una prop id de tipo string
-  type: PropTypes.string, // Espera una prop type de tipo string
-  text: PropTypes.string, // Espera una prop text de tipo string
-  onClick: PropTypes.func, // Espera una prop onClick de tipo función
-};
-
-export default Button;
-
-
-
-
-
-/*function Button({ id, type, text, onClick }) {
-  const [currentText, setCurrentText] = useState(text);
-
-  const handleClick = () => {
-    setCurrentText("Button clicked!");
-  };
-
-  return (
-    <>
-      <button id={id} type={type} onClick={handleClick} className="btn">
-        {currentText}
+    <div className="button-views">
+      <button
+        className={`button-view ${clickedButton === 1 ? 'active' : ''}`}
+        onClick={() => handleButtonClick(1)}
+      >
+        {Text1}
       </button>
-    </>
+      <button
+        className={`button-view ${clickedButton === 2 ? 'active' : ''}`}
+        onClick={() => handleButtonClick(2)}
+      >
+        {Text2}
+      </button>
+    </div>
   );
 }
 
-export default Button;*/
+export default ButtonViews;

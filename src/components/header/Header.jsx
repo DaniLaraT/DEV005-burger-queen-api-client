@@ -5,12 +5,14 @@ import './header.css';
 import NavBar from '../NavBar/NavBar';
 import Title from '../Title/Title';
 
-function Header() {
+function Header({title}) {
+
+  
   return (
     <header className="header">
       <NavBar />
       <div className='title-header'>
-      <Title title={'MENU'} />
+      <Title title={title} />
       </div>
     </header>
   );
