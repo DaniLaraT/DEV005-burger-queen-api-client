@@ -20,13 +20,15 @@
     justify-content: flex-start;
     height: 100vh;
 }
+
 .extra1{
-    background-color: aqua;
-
+    background: white;
+    width: 70%;
+    height: 53.7%;
 }
-
 .order {
     background: white;
     width: 50%;
+    height: 47%;
     padding: 30px 70px;
 }

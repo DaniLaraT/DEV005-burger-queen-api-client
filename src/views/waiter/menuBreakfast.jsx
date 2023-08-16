@@ -15,7 +15,7 @@ const MenuBreakfast = () => {
   return (
     <div className='body'>
       <Header title= 'MENU'/>
-      <div><ButtonViews Text1={'DESAYUNO'} Text2={'ALMUERZO'}/></div>
+      <div><ButtonViews Text1={'PENDIENTES'} Text2={'TERMINADOS'}/></div>
       <div className='container1'>
         <div className='extra1'>
           <OptionsProductsMenu onAddToOrder={handleAddToOrder} />

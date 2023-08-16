@@ -5,6 +5,7 @@ import FormLogin from '../../components/login/formLogin';
 import Logo from '../../components/logo/logo';
 import './login.css'
 import { useNavigate } from 'react-router';
+import Swal from 'sweetalert2'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -34,6 +35,16 @@ const Login = () => {
           route ='/Kitchen';
         }
         navigate(route);
+      })
+      .catch((error) => {
+        console.error(error); // Puedes imprimir el error en la consola para depuración
+        Swal.fire({
+          title: 'Error!',
+          text: 'Datos incorrectos. Por favor, inténtalo nuevamente.',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#760909'
+          })
       })
   };
 
