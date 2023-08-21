@@ -19,6 +19,7 @@ const getAccessToken = () => {
         })
         .then(response => response.json())
         .then(data => {
+          console.log(data)
           resolve(data); // Resuelve la promesa con los datos obtenidos
         })
         .catch(error => {
