@@ -1,12 +1,18 @@
-.optionProducts{
-    width: 500px;
-    height: 476px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    background-color: white;
+
+
+.optionProducts {
+  width: 520px;
+  height: 520px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: white;
+  overflow: scroll;
 }
 
+h5 {
+  margin: 15px 0px 1px 0px;
+}
 
 .product-item {
     background-color: #FFE0AF;
@@ -14,8 +20,7 @@
     border: 1px solid #ccc;
     width: 199.847px;
     height: 97.76px;
-    padding: 5px;
-    margin: 15px;
+    margin: 10px 20px;
     display: flex;
     flex-direction: row;
     align-content: center;

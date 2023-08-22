@@ -29,6 +29,7 @@
 .order {
     background: white;
     width: 50%;
-    height: 47%;
+    height: 51.5%;
     padding: 30px 70px;
+    overflow: scroll;
 }
