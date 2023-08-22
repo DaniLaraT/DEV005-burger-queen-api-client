@@ -24,6 +24,23 @@ const MenuBreakfast = () => {
     }
   };
 
+  const handleRemoveFromOrder = (product) => {
+    const existingProductIndex = order.findIndex(item => item.id === product.id);
+
+    if (existingProductIndex !== -1) {
+      const updatedOrder = [...order];
+      if (updatedOrder[existingProductIndex].quantity > 1) {
+        updatedOrder[existingProductIndex].quantity -= 1;
+        setOrder(updatedOrder);
+      }
+    }
+  };
+
+  const handleDeleteFromOrder = (product) => {
+    const updatedOrder = order.filter(item => item.id !== product.id);
+    setOrder(updatedOrder);
+  };
+
   return (
     <div className='body'>
       <Header title='MENU' />
@@ -45,7 +62,11 @@ const MenuBreakfast = () => {
           />
         </div>
         <div className='order'>
-          <ProductsOrder order={order} onAddToOrder={handleAddToOrder}/>
+          <ProductsOrder 
+          order={order} 
+          onAddToOrder={handleAddToOrder} 
+          onRemoveFromOrder={handleRemoveFromOrder} 
+          onDeleteFromOrder={handleDeleteFromOrder}/>
         </div>
       </div>
     </div>

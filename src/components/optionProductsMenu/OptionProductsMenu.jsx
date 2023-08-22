@@ -27,7 +27,7 @@ const OptionsProductsMenu = ({ onAddToOrder, productType }) => { // Agrega la pr
     <div className='optionProducts'>
       {products.map(product => (
         <div key={product.id} className="product-item">
-          <div className='ImgProducts'> 
+           <div className='ImgProducts'>
           <img src={product.image} alt={product.name} className="product-image" />
           </div>
           <div className='descriptionProducts'>
