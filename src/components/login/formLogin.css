@@ -2,7 +2,7 @@
 
 .sectionLogin{
     width: 596px;
-height: 730px;
+height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,31 +26,33 @@ h2{
     gap: 10px;
 }
 
+.user{
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    border-radius: 50%;
+    border: 8px solid  #760909;
+    margin-bottom: 30px;
+    }
+    .user img {
+        border-radius: 50px;
+        width: 100%;
+        margin-bottom: -10px;
+    }
+
 .email{
     width: 362.012px;
     height: 50px;
     border: none;
     background-color:  #CF463F;
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-style: normal;
+    font-size: 20px;
     font-weight: 500;
-    border-bottom: 5px solid #FFE0AF;
+    border-bottom: 5px solid #FFE0AF; 
+   color: rgb(224, 224, 224);
 }
 
-.user{
-width: 90px;
-height: 90px;
-align-items: center;
-border-radius: 50%;
-border: 8px solid  #760909;
-margin-bottom: 30px;
-}
-.user img {
-    border-radius: 50px;
-    width: 100%;
-    margin-bottom: -10px;
-}
+
 
 .password{
     width: 362.012px;
@@ -58,10 +60,10 @@ margin-bottom: 30px;
     border: none;
     background-color:  #CF463F;
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-style: normal;
+    font-size: 20px;
     font-weight: 500;
     border-bottom: 5px solid #FFE0AF;
+    color: rgb(224, 224, 224);
 }
 
 .password::placeholder { color: rgb(224, 224, 224); font-weight: bold; }
@@ -80,5 +82,5 @@ font-size: 32px;
 font-style: normal;
 font-weight: 900;
 line-height: normal;
-margin-top: -40px;
+margin-top: 40px;
 }

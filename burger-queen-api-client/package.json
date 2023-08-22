@@ -10,14 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "sweetalert2": "^11.7.27"
-=======
-    "react-router-dom": "^6.14.2"
->>>>>>> efa081bde988107caf6bc310bc4b0378fdf6c963
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
