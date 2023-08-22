@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './menuBreakfast.css';
 import OptionsProductsMenu from '../../components/optionProductsMenu/OptionProductsMenu';

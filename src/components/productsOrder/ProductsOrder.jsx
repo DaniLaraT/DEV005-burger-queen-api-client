@@ -1,13 +1,15 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
+import PropTypes from 'prop-types';
 import "./ProductsOrder.css"; 
 import IncreaseButton from '../Button/Decrease-Increase/IncreaseButton';
 import DecreaseButton from '../Button/Decrease-Increase/DecreaseButton';
 import DeleteButton from '../Button/Decrease-Increase/DeleteButton';
 
-const ProductsOrder = ({ order, onAddToOrder, onRemoveFromOrder, onDeleteFromOrder }) => { // Agrega la prop "onRemoveFromOrder"
+const ProductsOrder = ({ order, onAddToOrder, onRemoveFromOrder, onDeleteFromOrder }) => {
   return (
     <div className='Container-Order'>
-      {/* Resto del código sin cambios */}
+      {/* Rest of the code without changes */}
       <ul className='Products-OrderCss'>
         {order.map((product, index) => (
           <li key={index} className='product-Order'>
@@ -17,11 +19,9 @@ const ProductsOrder = ({ order, onAddToOrder, onRemoveFromOrder, onDeleteFromOrd
               <IncreaseButton onClick={() => onAddToOrder(product)} />
             </div>
             <div className='buttonmenos'>
-              {/* Agrega el botón de disminución y su evento onClick */}
               <DecreaseButton onClick={() => onRemoveFromOrder(product)} />
             </div>
             <div className='buttoneliminar'>
-              {/* Agrega el botón de eliminación y su evento onClick */}
               <DeleteButton onClick={() => onDeleteFromOrder(product)} />
             </div>
           </li>
@@ -29,6 +29,19 @@ const ProductsOrder = ({ order, onAddToOrder, onRemoveFromOrder, onDeleteFromOrd
       </ul>
     </div>
   );
+};
+
+ProductsOrder.propTypes = {
+  order: PropTypes.arrayOf(
+    PropTypes.shape({
+      quantity: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+  onAddToOrder: PropTypes.func.isRequired,
+  onRemoveFromOrder: PropTypes.func.isRequired,
+  onDeleteFromOrder: PropTypes.func.isRequired,
 };
 
 export default ProductsOrder;

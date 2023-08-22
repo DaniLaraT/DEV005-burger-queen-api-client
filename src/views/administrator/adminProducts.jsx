@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const AdminProducts = () => (
     <>
       <h1>PAGINA ADMINISTRADOR</h1>

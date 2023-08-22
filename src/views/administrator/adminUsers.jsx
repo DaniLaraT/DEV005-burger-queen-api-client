@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const AdminUsers = () => (
     <>
       <h1>Página no encontrada</h1>
