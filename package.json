@@ -16,7 +16,8 @@
 <<<<<<< HEAD
     "sweetalert2": "^11.7.27"
 =======
-    "react-router-dom": "^6.14.2"
+    "react-router-dom": "^6.15.0",
+    "sweetalert2": "^11.7.23"
 >>>>>>> efa081bde988107caf6bc310bc4b0378fdf6c963
   },
   "devDependencies": {

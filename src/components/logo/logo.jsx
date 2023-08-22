@@ -6,9 +6,9 @@ const Logo = () => {
 
   return (
 
-    <figure className='content-logo'>
-        <img src="/img/logo2.png" alt="logo" />
-    </figure>
+    <div className='content-logo'>
+        <img src="/img/logo2.png" alt="logo" className='logoImg' />
+    </div>
   );
 }
 
