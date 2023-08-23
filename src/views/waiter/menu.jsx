@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
-import './menuBreakfast.css';
+import './menu.css';
 import OptionsProductsMenu from '../../components/optionProductsMenu/OptionProductsMenu';
 import ProductsOrder from '../../components/productsOrder/ProductsOrder';
 import Header from '../../components/header/Header';
 import ButtonViews from '../../components/Button/ButtonView/ButtonView';
+import NameOrder from '../../components/input/NameOrder';
+import Swal from 'sweetalert2';
 
 
-const MenuBreakfast = () => {
+const Menu = () => {
   const [order, setOrder] = useState([]);
   const [selectedProductType, setSelectedProductType] = useState('Desayuno'); // Estado para el tipo de producto seleccionado
+  const [customerName, setCustomerName] = useState(''); // Estado para el nombre del cliente
+
 
   const handleAddToOrder = (product) => {
     const existingProductIndex = order.findIndex(item => item.id === product.id);
@@ -41,6 +45,55 @@ const MenuBreakfast = () => {
     setOrder(updatedOrder);
   };
 
+  const handleCustomerNameChange = (name) => {
+    setCustomerName(name);
+  };
+
+  const handleGenerateOrder = () => {
+    if (order.length === 0 || customerName === '') {
+      Swal.fire({
+        title: 'Error!',
+        text: 'Por Favor agrega productos y nombre de cliente',
+        icon: 'error',
+        confirmButtonText: 'Ok',
+        confirmButtonColor: '#760909'
+      });
+      return;
+    }
+
+    const orderObject = {
+      client: customerName,
+      products: order.map(product => ({
+        qty: product.quantity,
+        product: {
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          image: product.image,
+          type: product.type,
+          dateEntry: product.dateEntry,
+        },
+      })),
+      status: 'pending',
+      dateEntry: new Date().toISOString(),
+    };
+// Restablece la orden a un estado inicial vacío
+setOrder([]);
+
+// Restablece el nombre del cliente a un estado inicial vacío
+setCustomerName('');
+
+Swal.fire({
+  title: 'Perfecto',
+  text: 'Tu Orden fue generada con exito',
+  icon: 'success',
+  confirmButtonText: 'Ok',
+  confirmButtonColor: '#760909'
+});
+    // Aqui va lo que queremos en la API
+    console.log('Orden generada:', orderObject);
+  };
+
   return (
     <div className='body'>
       <Header title='MENU' />
@@ -62,15 +115,19 @@ const MenuBreakfast = () => {
           />
         </div>
         <div className='order'>
+        <NameOrder customerName={customerName} onCustomerNameChange={handleCustomerNameChange} />
           <ProductsOrder 
           order={order} 
           onAddToOrder={handleAddToOrder} 
           onRemoveFromOrder={handleRemoveFromOrder} 
           onDeleteFromOrder={handleDeleteFromOrder}/>
+          <div>
+        <button onClick={handleGenerateOrder} className='buttonGenerarOrder'>Generar orden</button>
+        </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default MenuBreakfast;
+export default Menu;

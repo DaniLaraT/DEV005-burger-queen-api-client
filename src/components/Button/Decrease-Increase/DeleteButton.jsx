@@ -3,7 +3,7 @@ import './DeleteButton.css';
 
 const DeleteButton = ({ onClick }) => {
   return (
-    <button className='DeleteButton' onClick={onClick}>Eliminar</button>
+    <button className='DeleteButton' onClick={onClick}></button>
   );
 };
 

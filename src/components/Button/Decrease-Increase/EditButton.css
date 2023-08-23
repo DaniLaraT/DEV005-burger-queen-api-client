@@ -1,11 +1,11 @@
-.DeleteButton {
+.EditButton {
     width: 30px;
     height: 30px;
     background-color: transparent;
     /* color: #fff; */
     border: none;
     cursor: pointer;
-    background-image: url("img/eliminar.png");
+    background-image: url("img/editar.png");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: right-bottom;

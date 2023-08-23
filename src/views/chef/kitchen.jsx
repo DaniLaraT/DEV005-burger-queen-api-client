@@ -1,7 +1,12 @@
+import Header from "../../components/header/Header"
+import './kitchen.css';
+
 const Kitchen = () => (
     <>
-      <h1>PAGINA DE CHEF</h1>
+    <div className='body'>
+      <Header title='PEDIDOS' />
       <span>Aqui van las ordenes pendientes</span>
+      </div>
     </>
   )
   

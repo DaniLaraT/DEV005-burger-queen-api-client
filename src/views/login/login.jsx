@@ -14,12 +14,14 @@ const Login = () => {
     AuthPost(values.email, values.password)
       .then((response) => {
         const userRole = response.user.role;
-  
+        const userId = response.user.id;
         console.log(response);
         const accessToken = response.accessToken; // Obtén el token de la respuesta
       
       // Guarda el token en localStorage
       localStorage.setItem('accessToken', accessToken);
+      localStorage.setItem('userRole', userRole);
+      localStorage.setItem('userId', userId);
   
         // Verificar el rol y redirigir en consecuencia.
         const isAdmin = userRole === 'admin';
@@ -27,9 +29,9 @@ const Login = () => {
         const isChef = userRole === 'chef'
         let route = '/Kitchen';
         if (isAdmin) {
-          route ='/AdminProducts';
+          route ='/AdminUsers';
         } else if (isWaiter) {
-          route ='/MenuBreakfast';
+          route ='/Menu';
         }
         else if (isChef) {
           route ='/Kitchen';

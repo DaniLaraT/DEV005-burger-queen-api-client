@@ -4,7 +4,7 @@ import './IncreaseButton.css';
 
 const IncreaseButton = ({ onClick }) => {
   return (
-    <button className='IncreaseButton' onClick={onClick}>+</button>
+    <button className='ButtonDecrease-Increase' onClick={onClick}>+</button>
   );
 };
 

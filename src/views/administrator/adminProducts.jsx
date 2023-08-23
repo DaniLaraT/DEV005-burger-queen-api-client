@@ -1,8 +1,18 @@
+import MainTitle from "../../components/MainTitle/MainTitle";
+import Header from "../../components/header/Header"
+import HeaderAdmin from "../../components/headerAdmin/headerAdmin";
+import OptionProductsAdm from "../../components/optionProductsAdmList/OptionProductsAdm";
+import './adminProducts.css';
+
 const AdminProducts = () => (
     <>
-      <h1>PAGINA ADMINISTRADOR</h1>
-      <span>aqui van la administracion de productos</span>
+    <div className='body'>
+      <HeaderAdmin title='ADMIN' />
+      < MainTitle/>
+      < OptionProductsAdm/>
+    </div>
     </>
   )
+
   
   export default AdminProducts
