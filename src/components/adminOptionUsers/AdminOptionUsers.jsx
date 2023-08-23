@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import FetchUsers from './GetUsers';
+import FetchUsers from '../addUsers/GetUsers';
 import './AdminOptionUsers.css';
 import IncreaseButton from '../Button/Decrease-Increase/IncreaseButton';
 

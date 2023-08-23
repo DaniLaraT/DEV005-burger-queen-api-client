@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "./addUsers.css";
+import "./AddUsers.css";
 
 const AddUsers = ({ onSaveChanges }) => {
   const [email, setEmail] = useState("");
