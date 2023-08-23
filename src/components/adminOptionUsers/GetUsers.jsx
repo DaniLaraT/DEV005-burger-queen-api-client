@@ -4,7 +4,7 @@ const getAccessToken = () => {
   };
   
   // Función para realizar la solicitud de obtención de usuarios
-  const fetchUsers = () => {
+  const FetchUsers = () => {
     return new Promise((resolve, reject) => {
       const token = getAccessToken();
   
@@ -31,6 +31,6 @@ const getAccessToken = () => {
     });
   };
   
-  export default fetchUsers;
+  export default FetchUsers;
   
 

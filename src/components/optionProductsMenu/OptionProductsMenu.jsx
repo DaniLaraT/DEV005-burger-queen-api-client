@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import FetchProducts from './funcionGetProducts';
+import FetchProducts from './functionGetProducts';
 import './OptionProductsMenu.css'
 import IncreaseButton from '../Button/Decrease-Increase/IncreaseButton';
 

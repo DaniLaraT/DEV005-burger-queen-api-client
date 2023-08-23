@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import functionGetUsers from './functionGetUsers';
+import FetchUsers from './GetUsers';
 import './AdminOptionUsers.css';
 import IncreaseButton from '../Button/Decrease-Increase/IncreaseButton';
 
@@ -11,7 +11,7 @@ const AdminOptionUsers = ({ onAddToList, usersType }) => {
   useEffect(() => {
     async function fetchUsersByType() {
       try {
-        const usersData = await functionGetUsers();
+        const usersData = await FetchUsers();
         const filteredUsers = usersData.filter(user => user.type === usersType);
         setUsers(filteredUsers);
       } catch (error) {
