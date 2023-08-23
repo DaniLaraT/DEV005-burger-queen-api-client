@@ -1,0 +1,84 @@
+/* MainTitle.css */
+
+/* Estilos para el contenedor principal */
+.body {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* Estilos para el título */
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para la lista de empleados */
+  .container-employed {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .info-employe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+  }
+  
+  .title-name,
+  .title-role,
+  .title-option {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .container-users {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .users-Name,
+  .role {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .button-option-users {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button-edit-users,
+  .button-delete-users {
+    padding: 6px 12px;
+    margin: 0 4px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .add-users {
+    margin-top: 10px;
+  }
+  
+  .content-admin{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .constent-admin-children{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+  }
+  /* Agrega más estilos según tus necesidades */
+  

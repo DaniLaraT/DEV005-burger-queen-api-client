@@ -6,7 +6,6 @@ import ProductsOrder from '../../components/productsOrder/ProductsOrder';
 import Header from '../../components/header/Header';
 import ButtonViews from '../../components/Button/ButtonView/ButtonView';
 
-
 const MenuBreakfast = () => {
   const [order, setOrder] = useState([]);
   const [selectedProductType, setSelectedProductType] = useState('Desayuno'); // Estado para el tipo de producto seleccionado
