@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import FetchUsers from '../optionUsersList/ApiOptionUsers';
+import FetchUsers from '../optionUsersList/FetchUsers';
 import ButtonAddElement from '../Button/ButtonAddElement/ButtonAddElement';
 import EditButton from '../Button/Decrease-Increase/EditButton';
 import DeleteButton from '../Button/Decrease-Increase/DeleteButton';

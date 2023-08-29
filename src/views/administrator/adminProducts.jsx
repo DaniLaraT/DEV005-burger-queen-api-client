@@ -16,6 +16,7 @@ const AdminProducts = () => (
           onClickButton2={() => setSelectedProductType('PRODUCTO')}
         />
       </div>
+      
       < OptionProductsAdm/>
     </div>
     </>

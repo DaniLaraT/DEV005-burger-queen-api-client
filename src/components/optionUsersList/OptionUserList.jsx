@@ -1,16 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import FetchUsers from './ApiOptionUsers';
-import './OptionUsersList.css'
-import DeleteButton from '../Button/Decrease-Increase/DeleteButton';
-import EditButton from '../Button/Decrease-Increase/EditButton';
 import ButtonAddElement from '../Button/ButtonAddElement/ButtonAddElement';
+import EditButton from '../Button/Decrease-Increase/EditButton';
+import DeleteButton from '../Button/Decrease-Increase/DeleteButton';
+import FetchUsers from './FetchUsers';
+import './OptionUserList.css';
 
-const OptionUsersList = ({ onAddToOrder }) => {
+
+
+const OptionProductsAdm = ({ onAddToOrder }) => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    FetchUsers() // Llama a la función FetchUsers para obtener los usuarios
+    FetchUsers() 
     .then(data => {
       setUsers(data); // Actualiza el estado con los usuarios obtenidos
     })
@@ -33,7 +35,7 @@ const OptionUsersList = ({ onAddToOrder }) => {
   return (
 <>
 <div className='constent-admin-children'>
-      <ButtonAddElement text={'+ AGREGAR USUARIO'}  onClick={handleAddUsers}/>
+      <ButtonAddElement text={'+ AGREGAR PRODUCTO'}  onClick={handleAddUsers}/>
         </div>
     <div className="info-users">
       <p>Id</p>
@@ -65,4 +67,4 @@ const OptionUsersList = ({ onAddToOrder }) => {
 };
 
 
-export default OptionUsersList;
+export default OptionProductsAdm;
