@@ -1,0 +1,136 @@
+
+.body-chef{
+  width: 1024px;
+  height: 768px;
+  background: #CF463F;
+  background-image: url("img/imgfondo.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: -70%;
+}
+.container-cooking {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background:whitesmoke;
+    padding: 34px;
+}
+  
+  
+  .container-orders-table {
+    flex-grow: 1;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+  }
+  
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tableHeader {
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+  .products-list {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  
+  .btnEstado {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .btnEstado:hover {
+    background-color: #0056b3;
+  }
+  
+  .chef {
+    width: 120px;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para el botón de creación de pedidos */
+  .buttonView {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .buttonView a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .buttonView button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .buttonView button:hover {
+    background-color: #0056b3;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .footer-button {
+    margin: 0;
+  }
+  
+  .footer-button img {
+    max-width: 20px;
+    margin-right: 5px;
+  }
+  
+  .footer-button  {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  
+ 
+  .title-header-chef {
+    display: flex;
+    width: 100%;
+    margin: -94px -2px -48px 182px;
+}

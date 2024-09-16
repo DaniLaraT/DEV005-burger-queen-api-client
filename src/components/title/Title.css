@@ -1,0 +1,17 @@
+/* Title.css */
+.title {
+   display: flex;
+   margin: 9px 0px 65px 5px;
+ }
+ 
+   h1{
+     color: #FFE0AF;
+     font-family: 'Nerko One', cursive;
+     font-size: 5em;
+   }
+ 
+   .logo-title {
+     width: 40%;
+     height: 100%;
+ }
+ 

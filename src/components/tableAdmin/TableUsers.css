@@ -1,0 +1,75 @@
+.btn-add-user {
+    background-color: #760909 !important;
+    }
+    button:hover {
+        border-color: #D6C288;
+      }
+
+  .new-container-btn-add{
+      margin:0%;
+      background-color:   whitesmoke; 
+
+   }
+
+  .table-subtitles{
+    background-color: whitesmoke; 
+  }
+   
+  .dashboard-products-image{
+    height: 30px;
+    width: 30px
+}
+.container-btn-admin-workers-products{
+    height: 50px;
+    width: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+}
+.btn-admin-workers{
+    background-color: rgb(205, 205, 199);
+    color: rgb(23, 1, 1);
+}
+.TableCell{
+    font-family: 'Playfair Display', serif;
+    background-color: rgb(186, 178, 178);
+}
+.dashboard-table-row,.container-edit-icon,.container-delete-icon{
+    border: none;
+    border-bottom: 1px solid rgb(240, 236, 233);
+}
+
+.table-dashboard-workers  {
+    font-family: 'Playfair Display', serif;
+    border: none;
+    width: 100%;
+    margin: 29px 0px 0px 5px;
+  }
+  
+
+  .container-dashboard-btnAddWorker{
+    height: 78%;
+    background: #cf463f;
+  }
+
+  .new-container {
+    background-color: whitesmoke; 
+    height: 91%;
+    overflow-y: scroll;
+  }
+
+  .table-subtitles{
+    color: inherit;
+    display: table-row;
+    vertical-align: middle;
+    outline: 0;
+  
+  }
+
+  .tbody{
+    display: table-row-group;
+
+
+  }
+  

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Nerko+One&display=swap');
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.sectionLogin {
+  align-items: center;
+  width: auto;
+  height: 75%;
+  padding: 40px;
+  display: grid;
+  grid-template-rows: auto;
+  position: absolute;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid #DCAA7B;
+  border-radius: 30px;
+  margin: 20px 20px 22px 137px;
+  box-shadow: 0px 4px 51px rgb(169, 31, 24);
+  transition: box-shadow 0.3s ease;
+}
+
+h2 {
+  color: #FFE0AF;
+  text-align: center;
+  font-family: 'Nerko One', cursive;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 56%;
+  height: 100%;
+  margin-top: -10px;
+}
+
+.user {
+  width: 90px;
+  height: 90px;
+  align-items: center;
+  border-radius: 50%;
+  border: 8px solid #760909;
+  margin-bottom: 30px;
+}
+
+.user img {
+  border-radius: 50px;
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+.email {
+  height: 50px;
+  border: none;
+  background-color: #CF463F;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 5px solid #FFE0AF;
+  color: rgb(224, 224, 224);
+  
+}
+
+.password {
+  height: 50px;
+  border: none;
+  background-color: #CF463F;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 5px solid #FFE0AF;
+  color: rgb(224, 224, 224);
+}
+
+.password::placeholder {
+  color: rgb(224, 224, 224);
+  font-weight: bold;
+}
+
+.email::placeholder {
+  color: rgb(224, 224, 224);
+  font-weight: bold;
+}
+
+.loginTotal {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #CF463F;
+  background-image: url("img/imgfondo.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: -70%;
+}
+
+.logoLogin {
+  width: 40%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #760909;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 60px;
+}
+
+.logoLogin img {
+  width: 400px;
+  padding: 47px 35px 30px 23px;
+  height: 400px;
+}
+
+/* Estilos para dispositivos que no son celulares (tablets y pantallas más grandes) */
+@media (min-width: 769px) {
+    .logoLogin {
+      display: flex;
+    }
+    .formLogin {
+        width: 56%;
+    }
+  }
+
+/* Estilos para celular */
+@media (max-width: 768px) {
+    .logoLogin {
+      display: none;
+    }
+    .formLogin {
+        width: 100%;
+    }
+  }
+  
